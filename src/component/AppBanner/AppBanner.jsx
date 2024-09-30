@@ -36,19 +36,27 @@ const AppBanner = () => {
                     delay: 0.3,
                 }}className='text-center sm:px-20'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis {" "}</motion.p>
                 {/* images link  */}
-                <motion.div initial={{opacity: 0, y: 100}}
-                whileInView={{opacity:1, y:0}}
-                transition={{
+                <div className='flex justify-center items-center gap-4'>
+                    <a href="#" className='max-w-[150px] sm:max-w-[120px] md:max-w-[200px]'> 
+                    <motion.img initial={{opacity: 0, y: 100}}
+                    whileInView={{opacity:1, y:0}}
+                    transition={{
                     type: "spring",
                     stiffness: 100,
                     damping: 10,
                     delay: 0.3,
-                }} className='flex justify-center items-center gap-4'>
-                    <a href="#" className='max-w-[150px] sm:max-w-[120px] md:max-w-[200px]'> <img src={AppStoreImg} alt="" /></a>
+                     }} src={AppStoreImg} alt="" /></a>
                     <a href="#" className='max-w-[150px] sm:max-w-[120px] md:max-w-[200px]'>
-                        <img src={PlayStoreImg} alt="" />
+                        <motion.img initial={{opacity: 0, y: 100}}
+                    whileInView={{opacity:1, y:0}}
+                    transition={{
+                    type: "spring",
+                    stiffness: 100,
+                    damping: 10,
+                    delay: 0.5,
+                     }}  src={PlayStoreImg} alt="" />
                     </a>
-                </motion.div>
+                </div>
                 </div>
 
             </div>

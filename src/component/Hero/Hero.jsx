@@ -26,7 +26,7 @@ const Hero = () => {
                     {/* text content section */}
                     <div className="text-lightOrange mt-[100px] md:mt-0 p-4 space-y-28">
                         <motion.h1 initial={{opacity: 0, y: -100}} 
-                        animate={{opacity: 1,y:0}}
+                        whileInView={{opacity: 1,y:0}}
                         transition={{
                             type: "spring",
                             stiffness: 100,
@@ -83,6 +83,7 @@ const Hero = () => {
                         </motion.div>     
                     </div>
                     {/* third div section */}
+                    <div className='hidden lg:block'>
                     <motion.div initial={{opacity: 0, y: 100}} 
                         animate={{opacity: 1,y:0}}
                         transition={{
@@ -101,12 +102,13 @@ const Hero = () => {
                         </div>
                     </motion.div>
                     <div></div>
+                    </div>
                 </div>
             </div>
             {/* Sidebar Menu Section */}
             {
                 sidebar && (
-                    <motion.div initial={{x:"100%"}} whileInView={{x:0}}className="absolute top-0 right-0 w-[140px] h-full bg-gradient-to-b from-primary/80 to-primaryDark/80 backdrop-blur-sm z-10">
+                    <motion.div initial={{x:"100%"}} whileInView={{x:0}}className="absolute top-0 right-0 w-[140px] h-full bg-gradient-to-b from-primary/80 to-primaryDark/80 backdrop-blur-sm z-50">
             <div className="flex flex-col justify-center items-center gap-6 text-white">
                 {/* line */}
                 <div className="w-[1px] h-[70px] bg-white"></div>
